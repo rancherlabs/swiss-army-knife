@@ -61,9 +61,9 @@ steps:
         path: /var/run/docker.sock
     settings:
       username:
-        from_secret: DOCKERHUB_USERNAME
+        from_secret: docker_username
       password:
-        from_secret: DOCKERHUB_PASSWORD
+        from_secret: docker_password
       repo: leodotcloud/swiss-army-knife
       tags:
         - dev

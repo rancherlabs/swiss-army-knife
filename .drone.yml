@@ -64,7 +64,7 @@ steps:
         from_secret: docker_username
       password:
         from_secret: docker_password
-      repo: leodotcloud/swiss-army-knife
+      repo: rancherlabs/swiss-army-knife
       tags:
         - dev
       dockerfile: package/Dockerfile

@@ -45,11 +45,13 @@ RUN apt-get update && \
     mv /usr/sbin/traceroute /usr/bin/traceroute && \
     curl -sLf https://get.docker.com/builds/Linux/x86_64/docker-1.10.3 > /usr/bin/docker && \
     chmod +x /usr/bin/docker && \
-    curl -sLf https://storage.googleapis.com/kubernetes-release/release/v1.16.8/bin/linux/amd64/kubectl > /usr/local/bin/kubectl-1.16 && \
-    curl -sLf https://storage.googleapis.com/kubernetes-release/release/v1.17.4/bin/linux/amd64/kubectl > /usr/local/bin/kubectl-1.17 && \
-    curl -sLf https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/linux/amd64/kubectl > /usr/local/bin/kubectl-1.18 && \
+    curl -sLf https://storage.googleapis.com/kubernetes-release/release/v1.16.15/bin/linux/amd64/kubectl > /usr/local/bin/kubectl-1.16 && \
+    curl -sLf https://storage.googleapis.com/kubernetes-release/release/v1.17.17/bin/linux/amd64/kubectl > /usr/local/bin/kubectl-1.17 && \
+    curl -sLf https://storage.googleapis.com/kubernetes-release/release/v1.18.17/bin/linux/amd64/kubectl > /usr/local/bin/kubectl-1.18 && \
+    curl -sLf https://storage.googleapis.com/kubernetes-release/release/v1.19.8/bin/linux/amd64/kubectl > /usr/local/bin/kubectl-1.19 && \
+    curl -sLf https://storage.googleapis.com/kubernetes-release/release/v1.20.4/bin/linux/amd64/kubectl > /usr/local/bin/kubectl-1.20 && \
     chmod +x /usr/local/bin/kubectl* && \
-    ln -s /usr/local/bin/kubectl-1.18 /usr/local/bin/kubectl && \
+    ln -s /usr/local/bin/kubectl-1.19 /usr/local/bin/kubectl && \
     mkdir /root/.kube
 
 ENV LOGLEVEL_TAG v0.1

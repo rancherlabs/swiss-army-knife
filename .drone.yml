@@ -5,7 +5,7 @@
 
 kind: pipeline
 type: exec
-name: default-amd64
+name: default-linux-amd64
 
 platform:
   os: linux

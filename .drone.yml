@@ -4,7 +4,6 @@
 #
 
 kind: pipeline
-type: exec
 name: default-linux-amd64
 
 platform:

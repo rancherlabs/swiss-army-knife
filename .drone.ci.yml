@@ -52,10 +52,10 @@ steps:
     image: plugins/docker
     settings:
       username:
-        from_secret: DOCKERHUB_USERNAME
+        from_secret: docker_username
       password:
-        from_secret: DOCKERHUB_PASSWORD
-      repo: leodotcloud/swiss-army-knife
+        from_secret: docker_password
+      repo: rancherlabs/swiss-army-knife
       dockerfile: package/Dockerfile
       tags:
         - latest
@@ -65,4 +65,3 @@ steps:
         - master
       event:
         - tag
-

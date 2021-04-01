@@ -4,8 +4,7 @@
 #
 
 kind: pipeline
-type: exec
-name: default-amd64
+name: default-linux-amd64
 
 platform:
   os: linux
@@ -61,11 +60,17 @@ steps:
         path: /var/run/docker.sock
     settings:
       username:
-        from_secret: DOCKERHUB_USERNAME
+        from_secret: docker_username
       password:
-        from_secret: DOCKERHUB_PASSWORD
-      repo: leodotcloud/swiss-army-knife
+        from_secret: docker_password
+      repo: rancherlabs/swiss-army-knife
       tags:
-        - dev
+        - ${DRONE_BUILD_NUMBER}
+        - ${DRONE_COMMIT_BRANCH}
+        - latest
       dockerfile: package/Dockerfile
-      dry_run: true
+    when:
+      branch: master
+      event:
+        include:
+        - push

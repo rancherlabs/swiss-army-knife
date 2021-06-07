@@ -68,6 +68,7 @@ steps:
       tags:
         - ${DRONE_BUILD_NUMBER}
         - ${DRONE_COMMIT_BRANCH}
+        - latest-amd64
         - latest
       dockerfile: package/Dockerfile
     when:
@@ -141,6 +142,7 @@ steps:
       tags:
         - ${DRONE_BUILD_NUMBER}
         - ${DRONE_COMMIT_BRANCH}
+        - latest-arm64
         - latest
       dockerfile: package/Dockerfile
     when:

@@ -60,6 +60,7 @@ steps:
       dockerfile: package/Dockerfile
       tags:
         - latest
+        - latest-amd64
         - ${DRONE_TAG}
     when:
       branch:
@@ -133,6 +134,7 @@ steps:
         - ${DRONE_BUILD_NUMBER}
         - ${DRONE_COMMIT_BRANCH}
         - latest
+        - latest-arm64
       dockerfile: package/Dockerfile
     when:
       branch: master

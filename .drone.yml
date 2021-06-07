@@ -3,7 +3,6 @@
 # Need to keep this in sync with .drone.ci.yml
 #
 
----
 kind: pipeline
 name: default-linux-amd64
 

@@ -29,7 +29,7 @@ steps:
       - ./scripts/version
 
   - name: lint
-    image: golangci/golangci-lint:v1.24.0
+    image: golangci/golangci-lint:v1.40.0
     commands:
       - ./scripts/lint
 
@@ -103,7 +103,7 @@ steps:
       - ./scripts/version
 
   - name: lint
-    image: golangci/golangci-lint:v1.24.0
+    image: golangci/golangci-lint:v1.40.0
     commands:
       - ./scripts/lint
 
